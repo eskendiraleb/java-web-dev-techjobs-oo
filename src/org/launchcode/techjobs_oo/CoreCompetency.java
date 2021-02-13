@@ -18,7 +18,8 @@ public class CoreCompetency {
     }
 
     public int getId() {
-        return id;
+        return id++;
+
     }
 
     public void setValue(String value) {
