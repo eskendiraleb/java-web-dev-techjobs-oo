@@ -89,23 +89,7 @@ public class Job {
                 "\nCore Competency: " + this.coreCompetency;
          return  returnResult;
         }
-/*public String toString() {
-    String errorMessage = "Data not available";
-    String n = name;
-    if (n == null) n = errorMessage;
 
-    String b = breed;
-    if (b == null) b = errorMessage;
-
-    String a = age;
-    if (a == null) a = errorMessage;
-
-    return "\n" +
-          "\nName: " + n +
-          "\nBreed: " + b +
-          "\nAge: " + a +
-          "\n";
-}*/
     @Override
      public boolean equals(Object o) {  // Two objects are equal if they have the same id.
          if (this == o) return true;
