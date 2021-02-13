@@ -28,7 +28,7 @@ public class Job {
        this.coreCompetency = coreCompetency;
     }
 
-        public int getId() {
+       public int getId() {
             return id;
         }
 
