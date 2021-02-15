@@ -32,14 +32,14 @@ public class Job {
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
     public int getId() {
-        return id;
+        return nextId++;
     }
 
-    public String getName() {
+    public  String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public  void setName(String name) {
         this.name = name;
     }
 
@@ -77,17 +77,19 @@ public class Job {
 
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match.
-    @Override
-    public String toString() {
-        String returnResult = "";
 
-        returnResult +=  "\nID: " + this.nextId++ +
-                "\nName: " + this.name +
-                "\nEmployer: " +this.employer +
-                "\nLocation: " + this.location +
-                "\nPosition Type: " + this.positionType +
-                "\nCore Competency: " + this.coreCompetency;
-         return  returnResult;
+         @Override
+        public String toString() {
+        String returnString = "";
+        //String conver = String.valueOf(this.getId());
+        returnString += "\n\nID: " + this.getId()+
+                        "\nName: " + this.name +
+                        "\nEmployer: " + this.employer +
+                        "\nLocation: " + this.location +
+                        "\nPosition Type: " + this.positionType +
+                        "\nCore Competency: " + this.coreCompetency;
+
+        return returnString;
         }
 
     @Override
