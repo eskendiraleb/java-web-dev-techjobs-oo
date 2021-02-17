@@ -14,12 +14,16 @@ public class Main {
         jobs.add(job2);
         jobs.add(job3);
 
+        //if (this.employer.getValue().isEmpty()) employer.setValue("Data Not available");
 
 
        // System.out.println(Job);
         for (Job job : jobs) {
            // System.out.println(job);
-
+            if (job.getEmployer().getValue().isEmpty()) job.getEmployer().setValue("Data Not available");
+            if (job.getLocation().getValue().isEmpty()) job.getLocation().setValue("Data Not available");
+            if (job.getPositionType().getValue().isEmpty()) job.getPositionType().setValue("Data Not available");
+            if (job.getCoreCompetency().getValue().isEmpty()) job.getCoreCompetency().setValue("Data Not available");
             System.out.println(job.toString());
         }
     }

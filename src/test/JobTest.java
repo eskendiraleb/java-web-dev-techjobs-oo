@@ -8,11 +8,16 @@ import org.launchcode.techjobs_oo.Job;
 import org.launchcode.techjobs_oo.Location;
 import org.launchcode.techjobs_oo.PositionType;
 
+
+import java.io.File;
+import java.util.Scanner;
+
 import static org.junit.Assert.*;
 public class JobTest extends Job {
 
     Job job;
-
+    Job job2;
+    private int id;
 
     @Before
 
@@ -20,14 +25,14 @@ public class JobTest extends Job {
     public void settingJobId() {
 
         job = new Job();
-        job = new Job();
-        assertFalse(job.getId() == job.getId());
+        job2 = new Job();
+        assertFalse(job.getId() == job2.getId());
     }
 
     @Test
     public void testJobConstructorSetsAllFields() {
         job = new Job("Product tester", new Employer("ACME"), new Location("Desert"),
-                new PositionType("Quality control"), new CoreCompetency("Persistence"));
+              new PositionType("Quality control"), new CoreCompetency("Persistence"));
 
         if (job instanceof Job) {
             assertEquals("Wrong Name ", "Product tester", job.getName());
@@ -48,18 +53,17 @@ public class JobTest extends Job {
     }
 
     @Test
-    public void toStringTest1() {
+    public void toStringTest() {
         String toString = job.toString();
 
-       // assertTrue(toString.contains("\n\nID: " + String.valueOf(this.getId())));
+
+        assertTrue(toString.contains("\n\nID: " + job.getId()));
         assertTrue(toString.contains("\nName: " + this.getName()));
         assertTrue(toString.contains("\nEmployer: " + this.getEmployer()));
         assertTrue(toString.contains("\nLocation: " + this.getLocation()));
         assertTrue(toString.contains("\nPosition Type: " + this.getPositionType()));
         assertTrue(toString.contains("\nCore Competency: " + this.getCoreCompetency()));
 
-
     }
-
 
 }

@@ -22,6 +22,7 @@ public class Job {
     //  other five fields. The second constructor should also call the first in order to initialize
     //  the 'id' field.
     public Job(String name, Employer employer, Location location, PositionType positionType, CoreCompetency coreCompetency) {
+        this();
         this.name = name;
         this.employer = employer;
         this.location = location;
@@ -32,14 +33,14 @@ public class Job {
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
     public int getId() {
-        return nextId++;
+        return id;
     }
 
-    public  String getName() {
+    public String getName() {
         return name;
     }
 
-    public  void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -78,19 +79,21 @@ public class Job {
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match.
 
-         @Override
-        public String toString() {
-        String returnString = "";
-        //String conver = String.valueOf(this.getId());
-        returnString += "\n\nID: " + this.getId()+
+    @Override
+    public String toString() {
+        String stringResult = "";
+
+                stringResult+=
+                        "\n\nID: " + this.id +
                         "\nName: " + this.name +
                         "\nEmployer: " + this.employer +
                         "\nLocation: " + this.location +
                         "\nPosition Type: " + this.positionType +
                         "\nCore Competency: " + this.coreCompetency;
 
-        return returnString;
-        }
+                return stringResult;
+
+    }
 
     @Override
      public boolean equals(Object o) {  // Two objects are equal if they have the same id.
