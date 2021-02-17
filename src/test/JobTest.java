@@ -8,19 +8,16 @@ import org.launchcode.techjobs_oo.Job;
 import org.launchcode.techjobs_oo.Location;
 import org.launchcode.techjobs_oo.PositionType;
 
-
-import java.io.File;
-import java.util.Scanner;
-
+//import java.io.File;
 import static org.junit.Assert.*;
+
 public class JobTest extends Job {
 
     Job job;
     Job job2;
-    private int id;
+
 
     @Before
-
     @Test
     public void settingJobId() {
 
@@ -35,11 +32,11 @@ public class JobTest extends Job {
               new PositionType("Quality control"), new CoreCompetency("Persistence"));
 
         if (job instanceof Job) {
-            assertEquals("Wrong Name ", "Product tester", job.getName());
-            assertEquals("Wrong Employer ", "ACME", job.getEmployer().getValue());
-            assertEquals("Wrong Location ", "Desert", job.getLocation().getValue());
-            assertEquals("Wrong Position Type ", "Quality control", job.getPositionType().getValue());
-            assertEquals("Wrong Corecompetency Type ", "Persistence", job.getCoreCompetency().getValue());
+            assertEquals("Wrong Name ", job.getName(),"Product tester" );
+            assertEquals("Wrong Employer ", job.getEmployer().getValue(),"ACME");
+            assertEquals("Wrong Location ", job.getLocation().getValue(),"Desert" );
+            assertEquals("Wrong Position Type ",  job.getPositionType().getValue(),"Quality control");
+            assertEquals("Wrong Corecompetency Type ", job.getCoreCompetency().getValue(),"Persistence" );
         }
 
     }

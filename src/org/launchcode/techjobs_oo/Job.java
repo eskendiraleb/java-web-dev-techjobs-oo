@@ -84,7 +84,7 @@ public class Job {
         String stringResult = "";
 
                 stringResult+=
-                        "\n\nID: " + this.id +
+                        "\nID: " + this.id +
                         "\nName: " + this.name +
                         "\nEmployer: " + this.employer +
                         "\nLocation: " + this.location +
