@@ -54,7 +54,7 @@ public class JobTest extends Job {
         String toString = job.toString();
 
 
-        assertTrue(toString.contains("\n\nID: " + job.getId()));
+        assertTrue(toString.contains("\nID: " + job.getId()));
         assertTrue(toString.contains("\nName: " + this.getName()));
         assertTrue(toString.contains("\nEmployer: " + this.getEmployer()));
         assertTrue(toString.contains("\nLocation: " + this.getLocation()));
